@@ -78,5 +78,17 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+app.get('/about', (req, res) => {
+  res.json({
+    name: 'Hanzalah Siraj',
+    paragraphs: [
+      'I am a junior at NYU studying Computer Science with minors in Applied Mathematics and Economics. My home campus is NYU Abu Dhabi, and I am spending this semester at the New York campus.',
+      'Outside of class I do research in quantum machine learning, where I work on hybrid classical-quantum models for speech emotion recognition. My first paper from this work was published at IJCNN, with another accepted at QAI.',
+      'I am originally from Sri Lanka and my goal is to build a career at the intersection of quantitative research and finance. In my free time I cook, lift, and grind LeetCode.'
+    ],
+    imageUrl: 'https://i.postimg.cc/76b8vLs3/5c03fed4-eb66-4ee8-8b70-5265f81e8330.jpg'
+  })
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
